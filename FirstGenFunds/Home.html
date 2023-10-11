@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Comaptible" content = "IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <title>First-Gen Funds</title>
+    <link rel="icon" href="assets/logo 1.jpeg"> 
+  </head>
+
+<header>
+  <nav>
+<!--Logo-->
+    <div class="logo"> 
+      <img src="assets/logo 3.JPG" alt = "FGF"> 
+    </div>
+
+<!--Nav-Bar-->
+    <div class = "nav"> 
+      <ul class = "nav-list">
+        <li><a href="Home.html"> Forms </a></li>  
+        <li><a href="#"> Tools </a></li>  
+        <li><a href="#"> Services </a></li>
+        <li><a href="#"> Contacts</a></li>
+        <li><a href="#"> Newsletter </a></li>
+    </div>
+
+    <div class="lgnBtn">
+      <a href="#"> Login </a>
+    </div>
+  </nav>
+
+  
+  <!--Nav-Bar: Phone View-->
+  <nav class =  "navBar">
+    <div class="closeBtn">
+      <div class="xBar"> 
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </div>
+
+    <div class="openBar">
+      <div class="bar"> 
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropDownView">
+      <ul>
+        <li><a href="Home.html"> Forms </a></li>  
+        <li><a href="#"> Tools </a></li>  
+        <li><a href="#"> Services </a></li>
+        <li><a href="#"> Contacts</a></li>
+        <li><a href="#"> Newsletter </a></li>
+        
+
+        <div class="lgnBtn2">
+          <a href="#"> Login </a>
+        </div>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+<!--Main Body-->
+<div class="topGrid"> 
+  <div class="getInfo">
+    <h1>Empowering First-Gen Dreams:</h1>
+    <p>Empowering First-Gen Dreams: Your Journey to Financial Success Begins Here. Discover Comprehensive Financial Guidance Tailored for Trailblazing Students. Join First-Gen Funds and Transform Your Ambitions into Achievements.</p>
+      <div class="saveBtn">
+        <a href="#"> Start Saving! </a>
+      </div>
+    
+  </div>
+ 
+  <div class="getImg">
+    <img src="assets/logo 4.JPG" alt = "yes" id="frontImg">
+  </div>
+</div>
+  
+<!--Forms-->
+<!--Tools-->
+<!--Services-->
+<!--Contacts-->
+<!--Newsletter-->
+<!--Footer-->
+
+<!--Nav-Bar: JS-->
+<script>
+  function toggleNav() {
+    const dropDownView = document.querySelector(".dropDownView"); 
+    const closeBtn = document.querySelector(".closeBtn");
+    const openBar = document.querySelector(".openBar");
+    
+    if (dropDownView.classList.contains("open")) {
+      // If the dropdown is open, close it
+      dropDownView.classList.remove("open");
+      dropDownView.classList.add("close");
+      dropDownView.style.display = "block";
+      closeBtn.style.display = "none";
+      openBar.style.display = "block";
+
+    } else {
+      // If the dropdown is closed, open it
+      dropDownView.classList.remove("close");
+      dropDownView.classList.add("open");
+      closeBtn.style.display = "block";
+      openBar.style.display = "none";
+
+    }
+  }
+
+  // Attach click event listener to the toggleNav function
+  document.querySelector(".closeBtn").addEventListener("click", toggleNav);
+  document.querySelector(".openBar").addEventListener("click", toggleNav);
+</script>
+
+</html>

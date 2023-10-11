@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+}
+
+/*main logo*/
+
+.logo {
+  padding: 10px;
+  max-width: 100px; 
+  align-items: flex-start;
+}
+
+/*Nav bar*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #fbfbfb;
+  padding: 10px; 
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.nav ul li{
+  position: relative;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.nav ul li::after{
+  content: '';
+  width: 0%;
+  left: 0%;
+  height: 3px;
+  bottom: -5px;
+  background: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+.nav ul li:hover::after{
+  width: 100%;
+}
+
+/*login button*/
+
+.lgnBtn {
+  background: linear-gradient(#F87C7C, #D77CF8);
+  border-radius: 20px;
+  margin-top: 21px;
+  padding: 0.1rem 1rem; 
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  min-width: 10px;
+  max-width: 70px;
+  translate: -20px;
+  align-items: flex-end;
+}
+
+.lgnBtn a {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.lgnBtn:hover {
+  transform: scale(1.05);
+}
+
+/*Nav bar-DropdownView*/
+
+.navBar {
+  display: none;
+}
+
+.dropDownView.open {
+  transform: translateX(0%);
+} 
+
+.dropDownView.close {
+  transition: transform 1s;
+} 
+
+.dropDownView {
+  transform: translateX(100%);
+  position: fixed;
+  inset: 0 0 0 50%;
+  top: 60px;
+  backdrop-filter: blur(15px);  
+}
+
+.dropDownView ul {
+  list-style: none;
+  gap: 20px;
+  padding: 25px;
+}
+
+.dropDownView ul li{
+  position: relative;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.dropDownView ul li a {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.dropDownView ul li::after{
+  content: '';
+  width: 0%;
+  left: 0%;
+  height: 3px;
+  bottom: 5px;
+  background: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+.dropDownView ul li:hover::after{
+  width: 80%;
+}
+
+.closeBtn {
+  display: none;
+
+  font-size: 1.8rem;
+  color: #000;
+  cursor: pointer;
+  position:absolute;
+  right: 15px;;
+  z-index: 2;
+}
+
+.xBar {
+  padding: 25px;
+  max-width: 100px; 
+}
+
+.closeBtn:hover {
+  transform: scale(1.1);
+}
+
+.openBar {
+  display: none;
+
+  font-size: 1.8rem;
+  color: #000;
+  cursor: pointer;
+  position:absolute;
+  right: 15px;
+  z-index: 2;
+}
+
+.bar {
+  padding: 25px;
+  max-width: 100px; 
+}
+
+.openBar:hover {
+  transform: scale(1.1);
+}
+
+.lgnBtn2 {
+  display: none;
+  padding: 5px;
+  background: linear-gradient(#F87C7C, #D77CF8);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  justify-content: center;
+  width: 100%;
+}
+
+.lgnBtn2 a {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.lgnBtn2:hover {
+  transform: scale(1.05);
+}
+
+/*main body*/
+
+.topGrid {
+  display: flex;
+  align-items: flex-end; 
+  }
+
+.getInfo {
+  background-color: #F3DCDC;
+  padding: 5rem;
+ 
+}
+
+.getInfo h1 {
+  padding-top: 2rem;
+  color: #fbfbfb;
+  text-shadow: 4px 4px 5px #000;
+}
+
+.getInfo p {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  color: #fbfbfb;
+  text-shadow: 0px 0px 1px #000;
+  font-weight: 600;
+}
+
+
+#frontImg {
+  display: block;
+  margin: auto;
+  border-radius: 0 0 0 250px; 
+
+}
+
+.getImg {
+  background-color: #F3DCDC;
+}
+
+.saveBtn {
+  background: linear-gradient(#F87C7C, #D77CF8);
+  border-radius: 20px;
+  padding: 0.1rem 1rem; 
+  color: #fbfbfb;
+  cursor: pointer;
+  transition: transform 0.3s;
+  text-align: center;
+  width: 100%;
+  min-width: 50px;
+  max-width: 116px;
+}
+
+.saveBtn a {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.saveBtn:hover {
+  transform: scale(1.05);
+}
+
+.lgnBtn:hover {
+  transform: scale(1.05);
+}
+
+/*Responsive Web*/
+
+@media only screen and (max-width: 1320px) {
+  .header {
+    padding: 0 50px;
+  }
+} 
+
+@media only screen and (max-width: 1120px) {
+  .header {
+    padding: 0 50px;
+  }
+
+  .navBar {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  .getImg {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  } 
+  .lgnBtn {
+    display: none;
+  }
+  
+  .navBar {
+    display: block;
+  }
+
+  .openBar {
+    display: block;
+  }
+
+  .lgnBtn2 {
+    display: flex;
+  }
+
+}
+
